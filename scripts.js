@@ -13,56 +13,56 @@ const products = [
         name: "Khamrah",
         price: 38500,
         description: "Aroma intenso y elegante. Para almas dominantes.",
-        image: "../imgs/perfume1.webp"
+        image: "./perfume1.webp"
     },
     {
         id: 2,
         name: "Badee Al Oud",
         price: 34900,
         description: "Oud intenso y misterio nocturno.",
-        image: "../imgs/perfume2.webp"
+        image: "./perfume2.webp"
     },
     {
         id: 3,
         name: "Shaghaf",
         price: 41200,
         description: "Notas cálidas, dulces y sensuales.",
-        image: "../imgs/perfume3.jpg"
+        image: "./perfume3.jpg"
     },
     {
         id: 4,
         name: "Asad",
         price: 29900,
         description: "Frescura oriental con un toque floral.",
-        image: "../imgs/perfume3.webp"
+        image: "./perfume3.webp"
     },
     {
         id: 5,
         name: "Layali",
         price: 27500,
         description: "Esencia vibrante y juvenil.",
-        image: "../imgs/perfume4.jpeg"
+        image: "./perfume4.jpeg"
     },
     {
         id: 6,
         name: "Sultan's Dream",
         price: 45000,
         description: "Mezcla exótica de especias y maderas preciosas.",
-        image: "../imgs/perfume6.webp"
+        image: "./perfume6.webp"
     },
     {
         id: 7,
         name: "Nuit Mystique",
         price: 39000,
         description: "Aroma seductor para noches inolvidables.",
-        image: "../imgs/perfume7.jpg"
+        image: "./perfume7.jpg"
     },
     {
         id: 8,
         name: "Desert Rose",
         price: 32000,
         description: "Fragancia fresca con toques florales y amaderados.",
-        image: "../imgs/perfume8.jpeg"
+        image: "./perfume8.jpeg"
     }
 ];
 
@@ -316,3 +316,4 @@ function renderProducts() {
     }
   });
 });
+
