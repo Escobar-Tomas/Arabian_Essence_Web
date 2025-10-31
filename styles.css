@@ -1,0 +1,26 @@
+/* Estilos personalizados */
+        body {
+            background-color: #151934; /* brand-night */
+            color: #E5E7EB; /* gray-200 */
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-brand-navy hover:text-white transition-colors;
+        }
+        .btn-primary {
+            @apply px-6 py-3 bg-brand-gold text-brand-navy font-bold rounded-lg shadow-md hover:bg-brand-dark-gold hover:text-white transition duration-300 ease-in-out;
+        }
+        .btn-secondary {
+            @apply px-4 py-2 bg-brand-dark-gold text-white font-semibold rounded-lg shadow-sm hover:bg-brand-gold hover:text-brand-navy transition duration-300 ease-in-out;
+        }
+        .card {
+            @apply bg-brand-navy rounded-lg shadow-xl overflow-hidden transition duration-300 transform hover:scale-105;
+        }
+        /* Animación para el modal */
+        .modal-fade-in {
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }

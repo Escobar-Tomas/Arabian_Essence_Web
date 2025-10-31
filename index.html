@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabian Essence - Perfumería Árabe</title>
+    <link rel="icon" href="../imgs/logo_arabian-essence.png" type="image/x-icon">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (para íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Configuración de la paleta de colores de Arabian Essence en Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-navy': '#0A1047',      // Primario (Azul profundo)
+                        'brand-gold': '#BC9424',      // Primario (Oro)
+                        'brand-night': '#151934',     // Secundario (Azul noche)
+                        'brand-dark-gold': '#856E29', // Secundario (Oro oscuro)
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body class="antialiased">
+
+    <!-- Header / Navegación -->
+    <header class="bg-brand-navy shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo / Título -->
+                <div class="flex-shrink-0">
+                    <a href="#inicio" class="flex items-center space-x-2">
+                        <img class="h-10 w-auto" src="../imgs/logo_arabian-essence.png" alt="Logo de Arabian Essence" class="transition-transform duration-300 hover:scale-105">
+                        <span class="text-2xl font-bold text-brand-gold hover:text-brand-dark-gold transition-colors duration-300">Arabian Essence</span>
+                    </a>
+                </div>
+                
+                <!-- Links de Navegación -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                        <a href="#productos" class="nav-link">Productos</a>
+                        <a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </div>
+                </div>
+                
+                <!-- Botón del Carrito -->
+                <div class="flex items-center">
+                    <button id="open-cart-btn" class="relative p-2 rounded-full text-gray-300 hover:text-white hover:bg-brand-night focus:outline-none">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-count-badge" class="absolute -top-1 -right-1 bg-brand-gold text-brand-navy text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Hero (Inicio) -->
+        <section id="inicio" class="bg-brand-navy pt-20 pb-28">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold text-brand-gold mb-6">Descubre la Exclusividad</h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+                    Una experiencia sensorial única que trae la riqueza de la perfumería árabe a tu alcance.
+                </p>
+                <a href="#productos" class="btn-primary text-lg">Ver Colección</a>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Nosotros -->
+        <section id="sobre-nosotros" class="py-24">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">El Alma de Arabian Essence</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-brand-navy p-8 rounded-lg shadow-xl border-l-4 border-brand-gold">
+                        <h3 class="text-3xl font-semibold text-brand-gold mb-4">Misión</h3>
+                        <p class="text-lg text-gray-300">
+                            Ofrecer una experiencia sensorial única, trayendo la riqueza de la perfumería árabe al mercado local, combinando tradición e innovación tecnológica para una accesibilidad sin precedentes.
+                        </p>
+                    </div>
+                    <div class="bg-brand-navy p-8 rounded-lg shadow-xl border-l-4 border-brand-gold">
+                        <h3 class="text-3xl font-semibold text-brand-gold mb-4">Visión</h3>
+                        <p class="text-lg text-gray-300">
+                            Ser la marca líder y referente en perfumería árabe auténtica, reconocida por su calidad, sostenibilidad y por crear una comunidad apasionada por la cultura olfativa oriental.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Productos -->
+        <section id="productos" class="py-24">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">Nuestra Colección</h2>
+                <!-- Contenedor de la grilla de productos -->
+                <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Las tarjetas de productos se insertarán aquí por JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
+    <footer class="bg-brand-navy mt-24 border-t border-brand-dark-gold">
+        <div class="container mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <!-- Sección de Contacto -->
+            <div class="mb-6">
+                <p class="text-lg font-semibold text-white mb-4" id="contacto">Contáctanos</p>
+                <div class="flex justify-center space-x-6">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/543813524998" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-gold transition-colors duration-300">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                        <span class="sr-only">WhatsApp</span>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/arabian_essence_tucuman?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-gold transition-colors duration-300">
+                        <i class="fab fa-instagram text-3xl"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <p>&copy; 2024 Arabian Essence. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal del Carrito (Oculto por defecto) -->
+    <div id="cart-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 hidden">
+        <div class="bg-brand-night w-full max-w-md mx-4 rounded-lg shadow-2xl modal-fade-in">
+            <!-- Header del Modal -->
+            <div class="flex justify-between items-center p-6 border-b border-brand-dark-gold">
+                <h3 class="text-2xl font-bold text-white">Tu Carrito</h3>
+                <button id="close-cart-btn" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            
+            <!-- Items del Carrito -->
+            <div id="cart-items" class="p-6 max-h-96 overflow-y-auto space-y-4">
+                <!-- Los items del carrito se insertarán aquí -->
+                <!-- Ejemplo de item:
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h4 class="font-semibold text-white">Nombre del Producto</h4>
+                        <p class="text-sm text-gray-400">$10000 x 1</p>
+                    </div>
+                    <button class="text-red-500 hover:text-red-400">&times;</button>
+                </div>
+                -->
+                <p id="cart-empty-msg" class="text-gray-400 text-center">Tu carrito está vacío.</p>
+            </div>
+            
+            <!-- Footer del Modal -->
+            <div class="p-6 bg-brand-navy rounded-b-lg">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-xl font-bold text-white">Total:</span>
+                    <span id="cart-total" class="text-2xl font-bold text-brand-gold">$0</span>
+                </div>
+                <button id="checkout-btn" class="w-full btn-primary text-lg" disabled>
+                    Finalizar Compra (WhatsApp)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/scripts.js"></script>
+
+</body>
+</html>
