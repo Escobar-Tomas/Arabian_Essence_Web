@@ -13,7 +13,7 @@ const products = [
         name: "Khamrah",
         price: 38500,
         description: "Aroma intenso y elegante. Para almas dominantes.",
-        image: "./perfume1.webp"
+        image: "perfume1.webp"
     },
     {
         id: 2,
@@ -316,4 +316,5 @@ function renderProducts() {
     }
   });
 });
+
 
